@@ -23,6 +23,10 @@ fn main() -> Result<(), Error> {
 
     let args = Cli::parse();
 
+    if args.pattern == "" {
+        return Err(Error::msg("An empty pattern is not allowed"));
+    }
+
     let content = std::fs::read_to_string(&args.path)
         .with_context(|| format!("could not read file {:?}", &args.path))?;
 
