@@ -20,7 +20,7 @@ fn main() -> Result<(), Error> {
 
     let args = Cli::parse();
 
-    if args.pattern == "" {
+    if args.pattern.is_empty(){
         return Err(Error::msg("An empty pattern is not allowed"));
     }
 
