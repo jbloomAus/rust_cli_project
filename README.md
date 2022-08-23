@@ -2,9 +2,14 @@
 
 I'm teaching myself Rust using this tutorial: https://rust-cli.github.io/book/tutorial/cli-args.html
 
-To run the code currently, I do this:
+To run the code currently, I:
+
+1. Set the logger level to info.
+2. look for the presence of `main` (my pattern)
+3. look in the `./src/main.rs` file (seems a s good as any)
+
 ```bash
-RUST_LOG=info cargo run test test
+RUST_LOG=info cargo run main ./src/main.rs
 ```
 
 ## Learnings
