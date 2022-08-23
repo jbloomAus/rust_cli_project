@@ -12,6 +12,11 @@ To run the code currently, I:
 RUST_LOG=info cargo run main ./src/main.rs
 ```
 
+To format rust code, ensure rustfmt is installed then:
+```bash
+cargo fmt
+```
+
 ## Learnings
 - VSCode started showing inferred types called "inlay hints". I updated my vscode to toggle these off when I press `ctrl+ alt` as they seem useful but possibly annoying if I can't toggle them. I'm curious whether I can auto-add them to code and if other crustaceans don't like/want that then why not? 
 - Anyhow library can be used to create a chain of errors  via the "context" trait. I like the sound of this because it sounds similar to the trace in python which I love. 
