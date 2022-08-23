@@ -1,7 +1,6 @@
-
+use anyhow::{Context, Error};
 use clap::Parser;
 use grrs::find_matches;
-use anyhow::{Context,Error};
 
 #[macro_use]
 extern crate log;
@@ -14,8 +13,6 @@ struct Cli {
     #[clap(parse(from_os_str))]
     path: std::path::PathBuf,
 }
-
-
 
 fn main() -> Result<(), Error> {
     env_logger::init();

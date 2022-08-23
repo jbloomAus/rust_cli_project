@@ -1,7 +1,7 @@
 use assert_cmd::prelude::*; // Add methods on commands
+use assert_fs::prelude::*;
 use predicates::prelude::*; // Used for writing assertions
 use std::process::Command; // Run programs
-use assert_fs::prelude::*;
 
 #[test]
 fn file_doesnt_exist() -> Result<(), Box<dyn std::error::Error>> {
@@ -14,7 +14,6 @@ fn file_doesnt_exist() -> Result<(), Box<dyn std::error::Error>> {
 
     Ok(())
 }
-
 
 #[test]
 fn find_content_in_file() -> Result<(), Box<dyn std::error::Error>> {
@@ -29,8 +28,6 @@ fn find_content_in_file() -> Result<(), Box<dyn std::error::Error>> {
 
     Ok(())
 }
-
-
 
 #[test]
 fn pattern_is_empty() -> Result<(), Box<dyn std::error::Error>> {
