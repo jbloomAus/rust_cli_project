@@ -1,6 +1,9 @@
 use clap::Parser;
 use anyhow::{Context, Result};
 
+#[macro_use]
+extern crate log;
+
 #[derive(Parser)]
 struct Cli {
     // The pattern to look for
@@ -12,6 +15,9 @@ struct Cli {
 
 
 fn main() -> Result<()> {
+    env_logger::init();
+    info!("Starting up");
+
     let args = Cli::parse();
 
     let content = std::fs::read_to_string(&args.path)
@@ -22,5 +28,6 @@ fn main() -> Result<()> {
             println!("{}", line);
         }
     }
+    info!("Shutting down");
     Ok(())
 }

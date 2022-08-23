@@ -4,7 +4,7 @@ I'm teaching myself Rust using this tutorial: https://rust-cli.github.io/book/tu
 
 To run the code currently, I do this:
 ```bash
-cargo run test test
+RUST_LOG=info cargo run test test
 ```
 
 ## Learnings
